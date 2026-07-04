@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Selectors Complete Example</title>
+
+<style>
+
+/* ==========================================
+   1. Universal Selector
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================
+   2. Element Selector
+========================================== */
+
+body{
+    font-family:Arial;
+}
+
+h1{
+    color:red;
+}
+
+p{
+    color:green;
+}
+
+/* ==========================================
+   3. Class Selector
+========================================== */
+
+.box{
+    background:skyblue;
+    padding:20px;
+    margin:20px;
+}
+
+/* Multiple Classes */
+
+.rounded{
+    border-radius:15px;
+}
+
+/* ==========================================
+   4. ID Selector
+========================================== */
+
+#heading{
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   5. Group Selector
+========================================== */
+
+h2,
+h3,
+h4{
+
+    color:purple;
+
+}
+
+/* ==========================================
+   6. Descendant Selector
+========================================== */
+
+.container p{
+
+    color:orange;
+
+}
+
+/* ==========================================
+   7. Child Selector
+========================================== */
+
+.container > h2{
+
+    background:yellow;
+
+}
+
+/* ==========================================
+   8. Adjacent Sibling Selector
+========================================== */
+
+h2 + p{
+
+    font-size:25px;
+
+}
+
+/* ==========================================
+   9. General Sibling Selector
+========================================== */
+
+h2 ~ span{
+
+    color:red;
+
+}
+
+/* ==========================================
+   10. Attribute Selectors
+========================================== */
+
+/* Exact Match */
+
+input[type="text"]{
+
+    border:2px solid blue;
+
+}
+
+/* Begins With */
+
+a[href^="https"]{
+
+    color:green;
+
+}
+
+/* Ends With */
+
+a[href$=".com"]{
+
+    font-weight:bold;
+
+}
+
+/* Contains */
+
+a[href*="google"]{
+
+    background:yellow;
+
+}
+
+/* Contains Whole Word */
+
+img[alt~="nature"]{
+
+    border:5px solid green;
+
+}
+
+/* Starts With Language */
+
+p[lang|="en"]{
+
+    color:brown;
+
+}
+
+/* ==========================================
+   11. Pseudo Classes
+========================================== */
+
+button:hover{
+
+    background:black;
+    color:white;
+
+}
+
+button:active{
+
+    background:red;
+
+}
+
+input:focus{
+
+    background:lightyellow;
+
+}
+
+input:disabled{
+
+    background:lightgray;
+
+}
+
+input:enabled{
+
+    border:2px solid green;
+
+}
+
+li:first-child{
+
+    color:red;
+
+}
+
+li:last-child{
+
+    color:blue;
+
+}
+
+li:nth-child(2){
+
+    color:green;
+
+}
+
+li:nth-child(odd){
+
+    background:lightpink;
+
+}
+
+li:nth-child(even){
+
+    background:lightgray;
+
+}
+
+input:checked{
+
+    width:30px;
+    height:30px;
+
+}
+
+div:empty{
+
+    background:red;
+    height:40px;
+
+}
+
+p:not(.special){
+
+    color:purple;
+
+}
+
+/* ==========================================
+   12. Pseudo Elements
+========================================== */
+
+p::first-letter{
+
+    font-size:40px;
+
+}
+
+p::first-line{
+
+    color:red;
+
+}
+
+.box::before{
+
+    content:"Before ";
+
+    color:blue;
+
+}
+
+.box::after{
+
+    content:" After";
+
+    color:red;
+
+}
+
+::selection{
+
+    background:black;
+
+    color:white;
+
+}
+
+input::placeholder{
+
+    color:red;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 id="heading">
+
+CSS Selectors
+
+</h1>
+
+<div class="box rounded">
+
+This is a box.
+
+</div>
+
+<h2>
+
+Heading
+
+</h2>
+
+<p>
+
+Paragraph immediately after heading.
+
+</p>
+
+<span>
+
+Span 1
+
+</span>
+
+<span>
+
+Span 2
+
+</span>
+
+<div class="container">
+
+<h2>
+
+Container Heading
+
+</h2>
+
+<p>
+
+Paragraph inside container
+
+</p>
+
+<section>
+
+<p>
+
+Nested Paragraph
+
+</p>
+
+</section>
+
+</div>
+
+<input
+type="text"
+placeholder="Enter Name">
+
+<br><br>
+
+<input
+type="checkbox"
+checked>
+
+<br><br>
+
+<input
+type="text"
+disabled
+value="Disabled">
+
+<br><br>
+
+<button>
+
+Hover Me
+
+</button>
+
+<ul>
+
+<li>Apple</li>
+
+<li>Banana</li>
+
+<li>Mango</li>
+
+<li>Orange</li>
+
+</ul>
+
+<p class="special">
+
+Special Paragraph
+
+</p>
+
+<p>
+
+Normal Paragraph
+
+</p>
+
+<a href="https://google.com">
+
+Google
+
+</a>
+
+<br>
+
+<img
+src="image.jpg"
+alt="beautiful nature image">
+
+<div></div>
+
+</body>
+
+</html>
